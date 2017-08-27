@@ -27,6 +27,18 @@ export default class YouTubeDebugger extends React.Component {
 		});
 	}
 
+	// resolutionClick = () => {
+	// 	this.setState({
+	// 		settings: {
+	// 			...this.state.settings,
+	// 			video: {
+	// 				...this.state.settings.video,
+	// 				resolution: '720p'
+	// 			}
+	// 		}
+	// 	});
+	// }	
+
 	handleBitrate = () => {
 		this.setState({
 			settings: {
