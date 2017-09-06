@@ -24,13 +24,16 @@
 
         resClick = () => {
             this.setState({
-                seetings: {
+                settings: {
                     ...this.state.settings,
+                video: {
+                    ...this.state.video,
                     resolution: '720p'
                 }
-            })
-         }
-      }
+            }
+        })
+     }
+
 
 
             render() {
