@@ -25,22 +25,22 @@ class YouTubeDebugger extends React.Component {
   //   });
   // }
 
+
+  // bitClick = () => {
+  //   let newSettings = _.extend({}, this.state.settings);
+  //   newSettings.bitrate = 12;
+  //   this.setState({ settings: newSettings });
+  //   console.log(this.state)
+  // }
+
   bitClick = () => {
-    this.setState({
+    var newSettings = React.addons.update(this.state, {
       settings: {
-        ...this.state.settings,
-        bitrate: 12,
-      }, () => {
-        return(this.state.bitClick);
+        bitrate: { $set: 12 }
       }
     });
+    this.setState(newSettings);
   }
-
-  //   handleClick = () => {
-  //   this.setState({timesClicked: this.state.timesClicked + 1}, () => {
-  //     return(this.state.timesClicked)
-  //   });
-  // }
 
   // bitClick = () => {
   //   this.setState({
@@ -51,25 +51,25 @@ class YouTubeDebugger extends React.Component {
   //   })
   // }
 
-  // bitResolve = () => {
-  //   this.setState({
-  //     settings: {
-  //       ...this.state.settings,
-  //       video: {
-  //         resolution: '720p',
-  //       },
-  //     },
-  //   });
-  // }
-
   bitResolve = () => {
     this.setState({
-      video: Object.assign({}, this.state.settings.video,
-      {
-        resolution: '720p',
-      }),
-    })
+      settings: {
+        ...this.state.settings,
+        video: {
+          resolution: '720p',
+        },
+      },
+    });
   }
+
+  // bitResolve = () => {
+  //   this.setState({
+  //     video: Object.assign({}, this.state.settings.video,
+  //     {
+  //       resolution: '720p',
+  //     }),
+  //   })
+  // }
 
 
 
