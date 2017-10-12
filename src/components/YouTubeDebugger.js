@@ -21,18 +21,35 @@ class YouTubeDebugger extends React.Component {
   //     settings: {
   //       ...this.state.settings,
   //       bitrate: 12,
-  //     },
+  //     }, 
   //   });
   // }
 
   bitClick = () => {
     this.setState({
-      settings: Object.assign({}, this.state.settings,
-    {
-      bitrate: 12
-      })
-    })
+      settings: {
+        ...this.state.settings,
+        bitrate: 12,
+      }, () => {
+        return(this.state.bitClick);
+      }
+    });
   }
+
+  //   handleClick = () => {
+  //   this.setState({timesClicked: this.state.timesClicked + 1}, () => {
+  //     return(this.state.timesClicked)
+  //   });
+  // }
+
+  // bitClick = () => {
+  //   this.setState({
+  //     settings: Object.assign({}, this.state.settings,
+  //   {
+  //     bitrate: 12
+  //     })
+  //   })
+  // }
 
   // bitResolve = () => {
   //   this.setState({
