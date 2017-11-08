@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-export default class YouTubeDebugger extends React.Component {
+export default class YouTubeDebugger extends Component {
   constructor() {
     super();
-
     this.state = {
       errors: [],
       user: null,
