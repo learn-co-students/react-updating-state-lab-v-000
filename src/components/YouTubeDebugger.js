@@ -17,6 +17,7 @@ class YouTubeDebugger extends Component {
   }
   
   handleClickedBitrate = () => {
+
     this.setState({
       errors: [],
       user: null,
