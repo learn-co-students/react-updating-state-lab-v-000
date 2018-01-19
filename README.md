@@ -3,6 +3,7 @@
 ## Overview
 In this lab, you'll update state using `setState()`.
 
+
 ## World record click counter
 ![Oldtimer stuff](http://il5.picdn.net/shutterstock/videos/15633112/thumb/1.jpg)
 
