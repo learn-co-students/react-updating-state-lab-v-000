@@ -16,7 +16,7 @@ class YouTubeDebugger extends React.Component {
     }
   };
 
-  handleClick = () => {
+  updateBitrate = () => {
     this.setState({
       settings: {
         ...this.state.settings,
@@ -28,13 +28,12 @@ class YouTubeDebugger extends React.Component {
   render() {
     return (
       <div>
-        <button className='bitrate' onClick={this.handleClick}>Click me!</button>
+        <button className='bitrate' onClick={this.updateBitrate}>Click me!</button>
         <button className='resolution' onClick={this.handleClick}>Click me!</button>
       </div>
     );
   }
 }
-
 
 
 export default YouTubeDebugger;
