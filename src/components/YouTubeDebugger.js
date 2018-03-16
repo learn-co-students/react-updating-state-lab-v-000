@@ -4,25 +4,38 @@ class YouTubeDebugger extends React.Component {
   constructor() {
     super();
 
-    // Define the initial state:
     this.state = {
-      timesClicked: 0
-    };
-  }
+      errors: [],
+      user: null,
+      settings: {
+        bitrate: 8,
+        video: {
+          resolution: '1080p'
+        }
+      }
+    }
+  };
 
-  handleClick() {
-    // Update our state here...
-    this.setState(({ count: this.state.timesClicked + 1 }));
+  handleClick = () => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        bitrate: 12,
+      },
+    });
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Click me!</button>
+        <button className='bitrate' onClick={this.handleClick}>Click me!</button>
+        <button className='resolution' onClick={this.handleClick}>Click me!</button>
       </div>
     );
   }
 }
+
+
 
 export default YouTubeDebugger;
 
