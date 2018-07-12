@@ -1,5 +1,3 @@
-
-// Code YouTubeDebugger Component Here
 import React from 'react';
 
 export default class YouTubeDebugger extends React.Component {
@@ -11,7 +9,7 @@ export default class YouTubeDebugger extends React.Component {
     }
   }
 
-  updateBitrate = () => {
+  changeRate = () => {
     this.setState({
       settings: {
         ...this.state.settings,
@@ -20,7 +18,7 @@ export default class YouTubeDebugger extends React.Component {
     })
   }
 
-  updateResolution = () => {
+  changeResolution = () => {
     this.setState({
       settings: {
         ...this.state.settings, video: { resolution: '720p'}
