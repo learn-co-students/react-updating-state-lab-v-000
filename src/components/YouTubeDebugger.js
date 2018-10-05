@@ -17,14 +17,6 @@ export default class YouTubeDebugger extends React.Component {
             },}
         )
     }
-    // changeResolution = () => {
-    //     this.setState(prevState => ({
-    //         settings: {
-    //             ...prevState.settings,
-    //             resolution: '720p'
-    //         }
-    //     }))
-    // }
     
     changeResolution = () => {
         this.setState({
@@ -34,7 +26,6 @@ export default class YouTubeDebugger extends React.Component {
                     ...this.state.video,
                     resolution: '720p',
                 }
-                
             }
         })
     }
