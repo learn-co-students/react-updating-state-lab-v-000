@@ -21,3 +21,5 @@ export default class DigitalClicker extends Component {
     )
   }
 }
+
+// change to register submit
