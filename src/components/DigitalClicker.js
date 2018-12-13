@@ -10,16 +10,22 @@ class DigitalClicker extends React.Component {
     };
   }
 
-  incrementCount() {
-    this.setState((state) => {
-      return {timesClicked: state.timesClicked + 1 }
-      });
-  }
-  
-  handleClick = () => {
-    this.incrementCount();
-  };
+  // incrementCount() {
+  //   this.setState((state) => {
+  //     timesClicked: state.timesClicked + 1 
+  //   });
+  // }
 
+  // handleClick = () => {
+  //   this.incrementCount();
+  // };
+
+
+  handleClick = () => {     
+    this.setState((prevState) => ({   
+      timesClicked: prevState.timesClicked+1     
+    }))   
+  }
 
   render() {
     return (
