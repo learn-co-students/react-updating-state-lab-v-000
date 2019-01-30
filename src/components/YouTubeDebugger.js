@@ -34,7 +34,6 @@ export default class YouTubeDebugger extends Component {
 				}
 			}
 		})
-		console.log(this.state)
 	}
 
 	render() {
