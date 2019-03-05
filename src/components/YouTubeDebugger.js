@@ -18,21 +18,34 @@ class YouTubeDebugger extends React.Component {
 
   handleBit = () => {
     // Update our state here...
-
+        this.setState({
+          settings: {
+            ...this.state.settings,
+            bitrate: 12
+          }
+    });
 
   };
 
   handleRes = () => {
     // Update our state here...
-
+      this.setState({
+          settings: {
+            ...this.state.settings,
+            video: {
+              ...this.state.settings.video,
+              resolution: '720p'
+            }
+          }
+  });
 
   };
 
   render() {
     return (
       <div>
-        <button class='bitrate' onClick={this.handleBit}>Bitrate</button>
-        <button class='resolution' onClick={this.handleRes}>Resolution</button>
+        <button className='bitrate' onClick={this.handleBit}>Bitrate</button>
+        <button className='resolution' onClick={this.handleRes}>Resolution</button>
       </div>
     );
   }
