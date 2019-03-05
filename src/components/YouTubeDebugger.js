@@ -31,8 +31,8 @@ class YouTubeDebugger extends React.Component {
   render() {
     return (
       <div>
-        <button class="bitrate" onClick={this.handleBit}>Bitrate</button>
-        <button class="resolution" onClick={this.handleRes}>Resolution</button>
+        <button class='bitrate' onClick={this.handleBit}>Bitrate</button>
+        <button class='resolution' onClick={this.handleRes}>Resolution</button>
       </div>
     );
   }
