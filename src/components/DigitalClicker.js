@@ -11,11 +11,11 @@ class DigitalClicker extends React.Component {
   }
 
 // alternate method next one better
-  handleClick = () => {
-    this.setState({
-      timeClicked: this.state.timesClicked + 1
-    })
-  }
+  // handleClick = () => {
+  //   this.setState({
+  //     timeClicked: this.state.timesClicked + 1
+  //   })
+  // }
 
   handleClick = () => {
     this.setState(prevState => ({
