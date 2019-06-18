@@ -26,7 +26,6 @@ export default class YouTubeDebugger extends React.Component {
             }
         })
     }
-      
 
     newResolution = () => {
         this.setState({
@@ -47,6 +46,5 @@ export default class YouTubeDebugger extends React.Component {
             </div>
         )
     }
-
 
 }
