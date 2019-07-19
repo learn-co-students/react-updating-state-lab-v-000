@@ -16,20 +16,32 @@ export default class YouTubeDebugger extends React.Component {
         };
       }
 
-      handleClick = () => {
+      handleChangeBitrate = () => {
         this.setState({
-            video: {
-                ...this.state.settings.video.resolution,
-                bitrate: this.statesettings.bitrate
-              }
-        })
+          settings: {
+            ...this.state.settings,
+            bitrate: 12
+          }
+        });
       };
+    
+      handleChangeResolution = () => {
+        this.setState({
+          settings: {
+            ...this.state.settings,
+            video: {
+              ...this.state.settings.video,
+              resolution: '720p'
+            }
+          }
+        });
+    };
      
       render() {
         return (   
             <div>     
-            <button class="bitrate" onClick={this.handleClick}>{this.state.timesClicked}</button>
-            <button class="resolution" onClick={this.handleClick}>{this.state.timesClicked}</button>
+            <button className="bitrate" onClick={this.handleChangeBitrate}>Change Bitrate</button>
+            <button className="resolution" onClick={this.handleChangeResolution}>Change Resolution</button>
             </div>
         );
     }
