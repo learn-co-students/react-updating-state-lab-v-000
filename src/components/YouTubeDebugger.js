@@ -12,14 +12,23 @@ import React from 'react';
         bitrate: 8,
         video: {
           resolution: '1080p'
+        }
+      }
     }
   }
-    }
+
+  setBitrate = () => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        bitrate: 12
+      }
+    })
   }
 
   render(){
     return(
-      <button class='bitrate'></button>
+      <button class='bitrate' onClick={this.setBitrate}></button>
     )
   }
  }
