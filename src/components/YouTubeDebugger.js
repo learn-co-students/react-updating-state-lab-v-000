@@ -17,7 +17,7 @@ import React from 'react';
     }
   }
 
-  setBitrate = () => {
+  changeBitrate = () => {
     this.setState({
       settings: {
         ...this.state.settings,
@@ -26,9 +26,16 @@ import React from 'react';
     })
   }
 
+  changeRes = () => {
+
+  }
+  
   render(){
     return(
-      <button class='bitrate' onClick={this.setBitrate}></button>
+      <div>
+        <button class='bitrate' onClick={this.changeBitrate}>Set Bitrate to 12</button>
+        <button class='resolution' onClick={this.changeRes}>Change Resolution to 720</button>
+      </div>
     )
   }
  }
