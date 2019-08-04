@@ -1,8 +1,8 @@
 // Code YouTubeDebugger Component Here
-// Code DigitalClicker Component Here
 import React from 'react';
 
- class YouTubeDebuggerß extends React.Component{
+ class YouTubeDebugger extends React.Component{
+
   constructor() {
     super()
     this.state = {
@@ -17,26 +17,34 @@ import React from 'react';
     }
   }
 
-  changeBitrate = () => {
+    handleChangeBitrate = () => {
     this.setState({
       settings: {
         ...this.state.settings,
         bitrate: 12
       }
-    })
-  }
+    });
+  };
 
   changeRes = () => {
-
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        video: {
+          ...this.state.settings.video,
+          resolution: '720p'
+        }
+      }
+    })
   }
   
   render(){
     return(
       <div>
-        <button class='bitrate' onClick={this.changeBitrate}>Set Bitrate to 12</button>
-        <button class='resolution' onClick={this.changeRes}>Change Resolution to 720</button>
+        <button className='bitrate' onClick={this.handleChangeBitrate}>Set Bitrate to 12</button>
+        <button className='resolution' onClick={this.changeRes}>Change Resolution to 720</button>
       </div>
     )
   }
  }
- export default YouTubeDebuggerß;
+ export default YouTubeDebugger;
