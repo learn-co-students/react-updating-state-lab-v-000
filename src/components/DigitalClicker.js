@@ -4,16 +4,15 @@ export default class DigitalClicker extends Component {
     constructor() {
         super();
      
-        // Define the initial state:
         this.state = {
             timesClicked: 0
         };
       }
 
-      handleClick = () => {
+      handleClick = () => {      
         this.setState({
-            timesClicked: this.setState.timesClicked + 1
-          }, () => console.log(this.state.timesClicked))
+            timesClicked: this.state.timesClicked + 1
+          })
       }
 
 
