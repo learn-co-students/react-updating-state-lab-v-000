@@ -71,7 +71,6 @@ describe('<YouTubeDebugger />', () => {
     expectedState.settings.video.resolution = '720p';
 
     wrapper.find('.resolution').simulate('click');
-
     expect(wrapper.state()).to.deep.equal(expectedState);
   });
 });
