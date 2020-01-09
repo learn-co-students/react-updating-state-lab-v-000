@@ -9,9 +9,10 @@ export class DigitalClicker extends Component {
   }
 
   handleClick = () => {
-    let count = this.state.timesClicked + 1;
-    this.setState({
-      timesClicked: count
+    this.setState(previousState => {
+      return {
+        timesClicked: previousState.timesClicked + 1
+      };
     });
   };
 
