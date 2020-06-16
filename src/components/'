@@ -1,0 +1,48 @@
+import React, { Component } from 'react'
+
+export default class YouTubeDebugger extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      errors: [],
+      user: null,
+      settings: {
+        bitrate: 8,
+        video: {
+          resolution: '1080p'
+        }
+      }
+    }
+  }
+
+  adjustBitrate = () => {
+    const newSettings = {
+      ...this.state.settings,
+      video: {
+        resolution: '720p'
+      }
+    }
+    this.setState(
+      this.setState({
+        ...this.state,
+        settings: newSettings
+      })
+    )
+  }
+
+  render(){
+    return(
+      <div>
+        <button className='bitrate'>
+          Adjust bitrate
+        </button>
+      </div>
+
+      <div>
+        <button className='resolution' onClick={this.adjustBitrate}>
+          Change resolution
+        </button>
+      </div>
+    )
+  }
+}
