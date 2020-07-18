@@ -33,8 +33,8 @@ export default class YouTubeDebugger extends Component {
       return {
         settings: {
           ...previousState.settings,
+          // video: previousState.settings.video, // That may not be conventional; I get a warning about duplicate keys.
           video: {
-            ...previousState.settings.video,
             resolution: '720p'
           }
         }
