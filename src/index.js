@@ -11,3 +11,5 @@ ReactDOM.render(
   </div>,
   document.getElementById('global')
 );
+
+// require('./test/index-test.js');
