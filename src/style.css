@@ -1,0 +1,72 @@
+/*:root {
+      --dialog-white: #ebebeb;#e6e7e8;/*#f2f4f5;*/
+      /*--black-text: #1a1b1c;
+      --main-white: #f0f0f0;
+      --shade-background: #263c47;
+      --main-red: #270c47;
+      --main-blue: #45567d;
+      --main-gray: #303841;
+      --accent: blue;
+      --accent-red: #be3144;
+      --accent-blue: #2980b9;
+      /*--accent-purple: #9a4ef1;
+      --accent-green1: #84f14e;
+      --accent-green2: #4ef18f;
+      --accent-orange: #f1bb4e;
+    }*/
+
+    /* Base reset */
+    /** {
+      margin: 0;
+      padding: 0;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    html {
+      box-sizing: border-box;
+    }*/
+      
+    .container, .btnContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .btnContainer {
+      flex-direction: row;
+    }
+
+    .btn {
+      cursor: pointer;
+      display: inline-block; 
+      padding: 0.3em 1.2em;
+      margin:0 0.1em 0.1em 0;
+      border-radius: 2em;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family:'Roboto',sans-serif;      
+      background-color:#2980b9;
+      color:#FFFFFF !important;
+      text-align: center;
+      border: 1.25px solid transparent !important;
+      transition: all 0.2s;     
+    }
+
+    .reset {
+      background-color: #be3144;
+    }
+    
+    .btn:hover {
+      border: 1.25px solid rgba(255,255,255,1) !important;
+    }
+
+    .settings {
+      width: 100%;
+      text-align: center;
+    }
